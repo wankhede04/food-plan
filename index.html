@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -23,304 +22,303 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-background: var(–cream);
-font-family: ‘DM Sans’, sans-serif;
-color: var(–dark);
-min-height: 100vh;
-}
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    min-height: 100vh;
+  }
 
-/* HEADER */
-.header {
-background: var(–green);
-color: white;
-text-align: center;
-padding: 52px 24px 40px;
-position: relative;
-overflow: hidden;
-}
-.header::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background: radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
-radial-gradient(ellipse at 80% 30%, rgba(0,0,0,0.15) 0%, transparent 60%);
-}
-.header-inner { position: relative; z-index: 1; max-width: 860px; margin: auto; }
-.header-eyebrow {
-font-size: 11px;
-letter-spacing: 3px;
-text-transform: uppercase;
-opacity: 0.7;
-margin-bottom: 12px;
-font-weight: 500;
-}
-.header h1 {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(32px, 6vw, 60px);
-font-weight: 900;
-line-height: 1.1;
-margin-bottom: 16px;
-}
-.header p {
-font-size: 15px;
-opacity: 0.82;
-max-width: 480px;
-margin: 0 auto 24px;
-line-height: 1.6;
-}
-.badge-row {
-display: flex;
-gap: 10px;
-justify-content: center;
-flex-wrap: wrap;
-}
-.badge {
-background: rgba(255,255,255,0.15);
-border: 1px solid rgba(255,255,255,0.25);
-border-radius: 20px;
-padding: 5px 14px;
-font-size: 12px;
-letter-spacing: 0.5px;
-font-weight: 500;
-}
+  /* HEADER */
+  .header {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 52px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 30%, rgba(0,0,0,0.15) 0%, transparent 60%);
+  }
+  .header-inner { position: relative; z-index: 1; max-width: 860px; margin: auto; }
+  .header-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 60px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .header p {
+    font-size: 15px;
+    opacity: 0.82;
+    max-width: 480px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+  }
+  .badge-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
 
-/* NAV */
-.day-nav {
-background: white;
-border-bottom: 1px solid var(–border);
-position: sticky;
-top: 0;
-z-index: 100;
-overflow-x: auto;
--webkit-overflow-scrolling: touch;
-}
-.day-nav::-webkit-scrollbar { display: none; }
-.day-nav-inner {
-display: flex;
-gap: 0;
-min-width: max-content;
-padding: 0 16px;
-}
-.day-btn {
-padding: 14px 20px;
-font-family: ‘DM Sans’, sans-serif;
-font-size: 13px;
-font-weight: 600;
-color: #888;
-background: none;
-border: none;
-border-bottom: 3px solid transparent;
-cursor: pointer;
-transition: all 0.2s;
-white-space: nowrap;
-}
-.day-btn:hover { color: var(–green); }
-.day-btn.active { color: var(–green); border-bottom-color: var(–green); }
+  /* NAV */
+  .day-nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .day-nav::-webkit-scrollbar { display: none; }
+  .day-nav-inner {
+    display: flex;
+    gap: 0;
+    min-width: max-content;
+    padding: 0 16px;
+  }
+  .day-btn {
+    padding: 14px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .day-btn:hover { color: var(--green); }
+  .day-btn.active { color: var(--green); border-bottom-color: var(--green); }
 
-/* MAIN */
-.container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+  /* MAIN */
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
 
-/* DAY SECTION */
-.day-section { margin-bottom: 56px; display: none; }
-.day-section.active { display: block; }
+  /* DAY SECTION */
+  .day-section { margin-bottom: 56px; display: none; }
+  .day-section.active { display: block; }
 
-.day-header {
-display: flex;
-align-items: center;
-gap: 16px;
-margin-bottom: 28px;
-}
-.day-number {
-width: 52px; height: 52px;
-background: var(–green);
-color: white;
-border-radius: 14px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-family: ‘Playfair Display’, serif;
-font-size: 20px;
-font-weight: 700;
-flex-shrink: 0;
-}
-.day-number span { font-size: 9px; font-family: ‘DM Sans’, sans-serif; font-weight: 500; opacity: 0.8; letter-spacing: 1px; text-transform: uppercase; }
-.day-title h2 {
-font-family: ‘Playfair Display’, serif;
-font-size: 24px;
-font-weight: 700;
-color: var(–dark);
-}
-.day-title p { font-size: 13px; color: #888; margin-top: 2px; }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .day-number {
+    width: 52px; height: 52px;
+    background: var(--green);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .day-number span { font-size: 9px; font-family: 'DM Sans', sans-serif; font-weight: 500; opacity: 0.8; letter-spacing: 1px; text-transform: uppercase; }
+  .day-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .day-title p { font-size: 13px; color: #888; margin-top: 2px; }
 
-/* MEAL CARDS */
-.meals-grid {
-display: grid;
-grid-template-columns: 1fr;
-gap: 16px;
-}
+  /* MEAL CARDS */
+  .meals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 
-.meal-card {
-background: white;
-border-radius: 20px;
-overflow: hidden;
-border: 1px solid var(–border);
-display: grid;
-grid-template-columns: auto 1fr;
-}
+  .meal-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
 
-.meal-type-bar {
-width: 6px;
-flex-shrink: 0;
-}
-.meal-type-bar.breakfast { background: var(–amber); }
-.meal-type-bar.lunch { background: var(–green); }
-.meal-type-bar.dinner { background: var(–blue); }
+  .meal-type-bar {
+    width: 6px;
+    flex-shrink: 0;
+  }
+  .meal-type-bar.breakfast { background: var(--amber); }
+  .meal-type-bar.lunch { background: var(--green); }
+  .meal-type-bar.dinner { background: var(--blue); }
 
-.meal-body { padding: 20px 22px; }
+  .meal-body { padding: 20px 22px; }
 
-.meal-label {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-font-size: 10px;
-font-weight: 700;
-letter-spacing: 2px;
-text-transform: uppercase;
-margin-bottom: 8px;
-padding: 3px 10px;
-border-radius: 20px;
-}
-.meal-label.breakfast { background: var(–amber-light); color: var(–amber); }
-.meal-label.lunch { background: var(–green-pale); color: var(–green); }
-.meal-label.dinner { background: var(–blue-light); color: var(–blue); }
+  .meal-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .meal-label.breakfast { background: var(--amber-light); color: var(--amber); }
+  .meal-label.lunch { background: var(--green-pale); color: var(--green); }
+  .meal-label.dinner { background: var(--blue-light); color: var(--blue); }
 
-.meal-name {
-font-family: ‘Playfair Display’, serif;
-font-size: 19px;
-font-weight: 700;
-margin-bottom: 10px;
-line-height: 1.3;
-}
+  .meal-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
 
-.meal-desc {
-font-size: 13px;
-color: #666;
-line-height: 1.6;
-margin-bottom: 14px;
-}
+  .meal-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
 
-.meal-meta {
-display: flex;
-gap: 8px;
-flex-wrap: wrap;
-}
-.tag {
-font-size: 11px;
-font-weight: 500;
-padding: 3px 10px;
-border-radius: 20px;
-background: var(–cream);
-color: #666;
-border: 1px solid var(–border);
-}
+  .meal-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--cream);
+    color: #666;
+    border: 1px solid var(--border);
+  }
 
-.prep-steps {
-margin-top: 14px;
-padding-top: 14px;
-border-top: 1px solid var(–border);
-}
-.prep-steps h4 {
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: #999;
-margin-bottom: 10px;
-}
-.step {
-display: flex;
-gap: 10px;
-margin-bottom: 8px;
-align-items: flex-start;
-}
-.step-num {
-width: 20px; height: 20px;
-background: var(–dark);
-color: white;
-border-radius: 6px;
-font-size: 10px;
-font-weight: 700;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-margin-top: 1px;
-}
-.step p { font-size: 13px; color: #555; line-height: 1.5; }
+  .prep-steps {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .prep-steps h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .step {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 20px; height: 20px;
+    background: var(--dark);
+    color: white;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step p { font-size: 13px; color: #555; line-height: 1.5; }
 
-/* WEEKLY OVERVIEW */
-.overview-card {
-background: var(–dark);
-color: white;
-border-radius: 20px;
-padding: 32px;
-margin-bottom: 40px;
-}
-.overview-card h2 {
-font-family: ‘Playfair Display’, serif;
-font-size: 22px;
-margin-bottom: 8px;
-}
-.overview-card p { font-size: 13px; opacity: 0.7; margin-bottom: 24px; }
-.overview-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 16px;
-}
-@media (max-width: 600px) { .overview-grid { grid-template-columns: 1fr; } }
-.overview-stat {
-background: rgba(255,255,255,0.07);
-border: 1px solid rgba(255,255,255,0.12);
-border-radius: 14px;
-padding: 18px;
-}
-.overview-stat .num {
-font-family: ‘Playfair Display’, serif;
-font-size: 32px;
-font-weight: 700;
-line-height: 1;
-margin-bottom: 4px;
-}
-.overview-stat .lbl { font-size: 12px; opacity: 0.6; letter-spacing: 0.5px; }
+  /* WEEKLY OVERVIEW */
+  .overview-card {
+    background: var(--dark);
+    color: white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 40px;
+  }
+  .overview-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .overview-card p { font-size: 13px; opacity: 0.7; margin-bottom: 24px; }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 600px) { .overview-grid { grid-template-columns: 1fr; } }
+  .overview-stat {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 18px;
+  }
+  .overview-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .overview-stat .lbl { font-size: 12px; opacity: 0.6; letter-spacing: 0.5px; }
 
-/* TIPS */
-.tips-section {
-background: var(–green-pale);
-border: 1px solid #C8DFC4;
-border-radius: 20px;
-padding: 28px;
-margin-top: 48px;
-}
-.tips-section h3 {
-font-family: ‘Playfair Display’, serif;
-font-size: 20px;
-color: var(–green);
-margin-bottom: 16px;
-}
-.tip { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
-.tip-icon { font-size: 16px; margin-top: 2px; }
-.tip p { font-size: 13px; color: #444; line-height: 1.6; }
+  /* TIPS */
+  .tips-section {
+    background: var(--green-pale);
+    border: 1px solid #C8DFC4;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 48px;
+  }
+  .tips-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+  .tip { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
+  .tip-icon { font-size: 16px; margin-top: 2px; }
+  .tip p { font-size: 13px; color: #444; line-height: 1.6; }
 
-/* PRINT */
-@media print {
-.day-nav, .header { break-inside: avoid; }
-.day-section { display: block !important; break-before: page; }
-.day-btn { display: none; }
-}
+  /* PRINT */
+  @media print {
+    .day-nav, .header { break-inside: avoid; }
+    .day-section { display: block !important; break-before: page; }
+    .day-btn { display: none; }
+  }
 </style>
-
 </head>
 <body>
 
@@ -353,7 +351,6 @@ margin-bottom: 16px;
 <div class="container">
 
   <!-- OVERVIEW -->
-
   <div class="overview-card">
     <h2>Your Week at a Glance</h2>
     <p>Balanced, repeatable, and simple — designed for a cook with basic Indian kitchen skills</p>
@@ -374,7 +371,6 @@ margin-bottom: 16px;
   </div>
 
   <!-- DAY 1: MONDAY -->
-
   <div class="day-section active" id="day-0">
     <div class="day-header">
       <div class="day-number">01<span>MON</span></div>
@@ -382,62 +378,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Moong Dal Chilla + Mint Chutney</div>
-      <div class="meal-desc">Thin savory pancakes made from soaked moong dal batter. High protein, fiber-rich and super filling. Pairs perfectly with fresh mint-coriander chutney.</div>
-      <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Fiber Rich</span><span class="tag">~25 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Soak 1 cup moong dal overnight. Grind with green chilli, ginger, salt into smooth batter.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Heat a non-stick tawa, pour ladle of batter, spread thin like a dosa. Drizzle oil on sides.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Cook 2 min each side till golden. Serve with ready-made or fresh mint chutney.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Moong Dal Chilla + Mint Chutney</div>
+          <div class="meal-desc">Thin savory pancakes made from soaked moong dal batter. High protein, fiber-rich and super filling. Pairs perfectly with fresh mint-coriander chutney.</div>
+          <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Fiber Rich</span><span class="tag">~25 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Soak 1 cup moong dal overnight. Grind with green chilli, ginger, salt into smooth batter.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Heat a non-stick tawa, pour ladle of batter, spread thin like a dosa. Drizzle oil on sides.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Cook 2 min each side till golden. Serve with ready-made or fresh mint chutney.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Roti + Dal + Soya Chunks Sabji + Salad</div>
-      <div class="meal-desc">Classic Indian thali — 2 rotis with protein-packed dal, soya chunks curry, and a fresh cucumber-tomato salad. Balanced, filling and wholesome.</div>
-      <div class="meal-meta"><span class="tag">Balanced</span><span class="tag">Protein Packed</span><span class="tag">~40 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Pressure cook toor dal with turmeric. Temper with mustard, cumin, onion, tomato, coriander.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Soak soya chunks in hot water 10 min, squeeze dry. Cook in onion-tomato masala with spices.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Make 2 fresh rotis. Chop cucumber, tomato, onion with lemon and salt for salad.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Roti + Dal + Soya Chunks Sabji + Salad</div>
+          <div class="meal-desc">Classic Indian thali — 2 rotis with protein-packed dal, soya chunks curry, and a fresh cucumber-tomato salad. Balanced, filling and wholesome.</div>
+          <div class="meal-meta"><span class="tag">Balanced</span><span class="tag">Protein Packed</span><span class="tag">~40 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Pressure cook toor dal with turmeric. Temper with mustard, cumin, onion, tomato, coriander.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Soak soya chunks in hot water 10 min, squeeze dry. Cook in onion-tomato masala with spices.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Make 2 fresh rotis. Chop cucumber, tomato, onion with lemon and salt for salad.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Paneer Tikka + Salad</div>
-      <div class="meal-desc">Marinated paneer cubes grilled on tawa — smoky, high protein and delicious. Served with a light cucumber-onion salad. Light yet satisfying dinner.</div>
-      <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Grilled</span><span class="tag">~30 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Mix curd, red chilli powder, garam masala, turmeric, chaat masala, lemon juice. Marinate paneer cubes 20 min.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Heat tawa or grill pan with a little oil. Cook paneer on all sides till charred marks appear.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve with sliced onion, tomato, cucumber and green chutney.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Paneer Tikka + Salad</div>
+          <div class="meal-desc">Marinated paneer cubes grilled on tawa — smoky, high protein and delicious. Served with a light cucumber-onion salad. Light yet satisfying dinner.</div>
+          <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Grilled</span><span class="tag">~30 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Mix curd, red chilli powder, garam masala, turmeric, chaat masala, lemon juice. Marinate paneer cubes 20 min.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Heat tawa or grill pan with a little oil. Cook paneer on all sides till charred marks appear.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve with sliced onion, tomato, cucumber and green chutney.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 2: TUESDAY -->
-
   <div class="day-section" id="day-1">
     <div class="day-header">
       <div class="day-number">02<span>TUE</span></div>
@@ -445,62 +437,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Paneer Stuffed Besan Chilla</div>
-      <div class="meal-desc">Savory gram flour pancakes stuffed with spiced paneer filling. Protein-packed and delicious — kids and adults love it. Quick to make in batches.</div>
-      <div class="meal-meta"><span class="tag">Protein Packed</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Mix 1 cup besan with water, ajwain, salt, red chilli, coriander leaves to a smooth pourable batter.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Grate paneer, mix with salt, green chilli, coriander. Keep aside as stuffing.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Pour batter on tawa, spread thin. Add paneer stuffing in center, fold over. Cook both sides golden.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Paneer Stuffed Besan Chilla</div>
+          <div class="meal-desc">Savory gram flour pancakes stuffed with spiced paneer filling. Protein-packed and delicious — kids and adults love it. Quick to make in batches.</div>
+          <div class="meal-meta"><span class="tag">Protein Packed</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Mix 1 cup besan with water, ajwain, salt, red chilli, coriander leaves to a smooth pourable batter.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Grate paneer, mix with salt, green chilli, coriander. Keep aside as stuffing.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Pour batter on tawa, spread thin. Add paneer stuffing in center, fold over. Cook both sides golden.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Brown Rice + Rajma + Greek Yogurt + Salad</div>
-      <div class="meal-desc">Hearty rajma with nutty brown rice — a comfort classic. Greek yogurt on the side adds cooling protein. Fresh salad completes the balanced plate.</div>
-      <div class="meal-meta"><span class="tag">Comforting</span><span class="tag">High Protein</span><span class="tag">~45 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Soak rajma overnight. Pressure cook 4–5 whistles. Make gravy with onion-tomato masala, add cooked rajma.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Cook brown rice with 1:2.5 ratio water. Takes about 30 min — start early.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve with 2 tbsp Greek yogurt and fresh kachumber salad (onion, tomato, cucumber, lemon).</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Brown Rice + Rajma + Greek Yogurt + Salad</div>
+          <div class="meal-desc">Hearty rajma with nutty brown rice — a comfort classic. Greek yogurt on the side adds cooling protein. Fresh salad completes the balanced plate.</div>
+          <div class="meal-meta"><span class="tag">Comforting</span><span class="tag">High Protein</span><span class="tag">~45 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Soak rajma overnight. Pressure cook 4–5 whistles. Make gravy with onion-tomato masala, add cooked rajma.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Cook brown rice with 1:2.5 ratio water. Takes about 30 min — start early.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve with 2 tbsp Greek yogurt and fresh kachumber salad (onion, tomato, cucumber, lemon).</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Grilled Tofu + Vegetable Soup</div>
-      <div class="meal-desc">Light, warm and protein-rich dinner. Tofu grilled with soy sauce and spices alongside a clear vegetable broth. Perfect for a relaxed evening.</div>
-      <div class="meal-meta"><span class="tag">Light</span><span class="tag">Warm</span><span class="tag">~30 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Press tofu dry. Marinate with soy sauce, chilli flakes, garlic powder 10 min. Grill on pan with oil.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Boil chopped carrots, beans, peas, celery in vegetable stock. Season with pepper and herbs.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve soup hot with grilled tofu slices on side.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Grilled Tofu + Vegetable Soup</div>
+          <div class="meal-desc">Light, warm and protein-rich dinner. Tofu grilled with soy sauce and spices alongside a clear vegetable broth. Perfect for a relaxed evening.</div>
+          <div class="meal-meta"><span class="tag">Light</span><span class="tag">Warm</span><span class="tag">~30 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Press tofu dry. Marinate with soy sauce, chilli flakes, garlic powder 10 min. Grill on pan with oil.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Boil chopped carrots, beans, peas, celery in vegetable stock. Season with pepper and herbs.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve soup hot with grilled tofu slices on side.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 3: WEDNESDAY -->
-
   <div class="day-section" id="day-2">
     <div class="day-header">
       <div class="day-number">03<span>WED</span></div>
@@ -508,62 +496,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Vegetable Poha + Peanuts</div>
-      <div class="meal-desc">Flattened rice cooked with mustard, curry leaves, turmeric, onion, peas and crunchy peanuts. Light, tasty with good carbs — a classic Indian breakfast.</div>
-      <div class="meal-meta"><span class="tag">Light</span><span class="tag">Good Carbs</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Rinse thick poha, let it sit 5 min to soften. Do NOT over-soak.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Temper mustard, curry leaves, green chilli in oil. Add onion, fry. Add turmeric, peas, salt.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add poha, mix gently. Top with roasted peanuts, lemon juice and coriander. Serve warm.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Vegetable Poha + Peanuts</div>
+          <div class="meal-desc">Flattened rice cooked with mustard, curry leaves, turmeric, onion, peas and crunchy peanuts. Light, tasty with good carbs — a classic Indian breakfast.</div>
+          <div class="meal-meta"><span class="tag">Light</span><span class="tag">Good Carbs</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Rinse thick poha, let it sit 5 min to soften. Do NOT over-soak.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Temper mustard, curry leaves, green chilli in oil. Add onion, fry. Add turmeric, peas, salt.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add poha, mix gently. Top with roasted peanuts, lemon juice and coriander. Serve warm.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Rotis + Paneer Bhurji</div>
-      <div class="meal-desc">Spiced scrambled paneer cooked with onions, tomatoes and peppers. High protein, simple and delicious with fresh rotis. A desi classic that never fails.</div>
-      <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Simple</span><span class="tag">~30 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Heat oil, sauté finely chopped onion till golden. Add ginger-garlic paste, chopped tomato.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Add turmeric, red chilli, coriander powder. Crumble paneer in, mix well on high heat 3 min.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Finish with garam masala, coriander leaves. Serve with 2–3 hot rotis.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Rotis + Paneer Bhurji</div>
+          <div class="meal-desc">Spiced scrambled paneer cooked with onions, tomatoes and peppers. High protein, simple and delicious with fresh rotis. A desi classic that never fails.</div>
+          <div class="meal-meta"><span class="tag">High Protein</span><span class="tag">Simple</span><span class="tag">~30 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Heat oil, sauté finely chopped onion till golden. Add ginger-garlic paste, chopped tomato.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Add turmeric, red chilli, coriander powder. Crumble paneer in, mix well on high heat 3 min.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Finish with garam masala, coriander leaves. Serve with 2–3 hot rotis.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Palak Tofu Bowl</div>
-      <div class="meal-desc">Creamy spinach curry base with soft tofu cubes — iron rich, satisfying and nutritious. Served over a small portion of rice or eaten as a bowl.</div>
-      <div class="meal-meta"><span class="tag">Iron Rich</span><span class="tag">Creamy</span><span class="tag">~35 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Blanch 2 cups spinach 1 min in hot water. Blend with green chilli and garlic to smooth puree.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Sauté onion, ginger in oil. Add spinach puree, cumin, garam masala, cream/curd. Simmer 10 min.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add cubed tofu gently. Do not over-stir. Serve in bowl over ½ cup plain rice.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Palak Tofu Bowl</div>
+          <div class="meal-desc">Creamy spinach curry base with soft tofu cubes — iron rich, satisfying and nutritious. Served over a small portion of rice or eaten as a bowl.</div>
+          <div class="meal-meta"><span class="tag">Iron Rich</span><span class="tag">Creamy</span><span class="tag">~35 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Blanch 2 cups spinach 1 min in hot water. Blend with green chilli and garlic to smooth puree.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Sauté onion, ginger in oil. Add spinach puree, cumin, garam masala, cream/curd. Simmer 10 min.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add cubed tofu gently. Do not over-stir. Serve in bowl over ½ cup plain rice.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 4: THURSDAY -->
-
   <div class="day-section" id="day-3">
     <div class="day-header">
       <div class="day-number">04<span>THU</span></div>
@@ -571,62 +555,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Idli + Sambar + Coconut Chutney</div>
-      <div class="meal-desc">Steamed rice-lentil cakes with spiced vegetable lentil broth and fresh coconut chutney. Light, fermented and gut-healthy. Great for digestion.</div>
-      <div class="meal-meta"><span class="tag">Gut Healthy</span><span class="tag">Fermented</span><span class="tag">~20 min (batter ready)</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Use store-bought or pre-made idli batter. Pour in greased idli moulds, steam 12–15 min.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Make sambar with toor dal, tamarind, sambar powder and vegetables (drumstick, tomato, onion).</p></div>
-        <div class="step"><div class="step-num">3</div><p>Use ready coconut chutney packet or grind coconut, green chilli, ginger with tempered mustard.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Idli + Sambar + Coconut Chutney</div>
+          <div class="meal-desc">Steamed rice-lentil cakes with spiced vegetable lentil broth and fresh coconut chutney. Light, fermented and gut-healthy. Great for digestion.</div>
+          <div class="meal-meta"><span class="tag">Gut Healthy</span><span class="tag">Fermented</span><span class="tag">~20 min (batter ready)</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Use store-bought or pre-made idli batter. Pour in greased idli moulds, steam 12–15 min.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Make sambar with toor dal, tamarind, sambar powder and vegetables (drumstick, tomato, onion).</p></div>
+            <div class="step"><div class="step-num">3</div><p>Use ready coconut chutney packet or grind coconut, green chilli, ginger with tempered mustard.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Palak Paneer + 1 Roti</div>
-      <div class="meal-desc">The iconic spinach-paneer curry. Iron rich and protein packed. Just one roti keeps it light without sacrificing satisfaction. A perennial favourite.</div>
-      <div class="meal-meta"><span class="tag">Iron Rich</span><span class="tag">Protein Packed</span><span class="tag">~35 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Blanch spinach, blend smooth. Sauté onion, ginger-garlic, tomato with whole spices.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Add spinach puree, curd, kasuri methi, garam masala. Simmer 8 min.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add paneer cubes (can lightly fry first). Serve with 1 roti and small side of onion.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Palak Paneer + 1 Roti</div>
+          <div class="meal-desc">The iconic spinach-paneer curry. Iron rich and protein packed. Just one roti keeps it light without sacrificing satisfaction. A perennial favourite.</div>
+          <div class="meal-meta"><span class="tag">Iron Rich</span><span class="tag">Protein Packed</span><span class="tag">~35 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Blanch spinach, blend smooth. Sauté onion, ginger-garlic, tomato with whole spices.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Add spinach puree, curd, kasuri methi, garam masala. Simmer 8 min.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add paneer cubes (can lightly fry first). Serve with 1 roti and small side of onion.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Moong Dal Bowl + 1 Roti</div>
-      <div class="meal-desc">Simple yellow moong dal with ghee tadka — simple, balanced and wholesome. Pair with 1 roti for a satisfying light dinner that's easy on digestion.</div>
-      <div class="meal-meta"><span class="tag">Simple</span><span class="tag">Balanced</span><span class="tag">~25 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Pressure cook split moong dal with turmeric and salt (2 whistles). Mash slightly.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Temper in ghee: cumin seeds, dried red chilli, asafoetida. Pour over dal.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve in bowl with 1 roti and a drizzle of lemon juice on dal.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Moong Dal Bowl + 1 Roti</div>
+          <div class="meal-desc">Simple yellow moong dal with ghee tadka — simple, balanced and wholesome. Pair with 1 roti for a satisfying light dinner that's easy on digestion.</div>
+          <div class="meal-meta"><span class="tag">Simple</span><span class="tag">Balanced</span><span class="tag">~25 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Pressure cook split moong dal with turmeric and salt (2 whistles). Mash slightly.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Temper in ghee: cumin seeds, dried red chilli, asafoetida. Pour over dal.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve in bowl with 1 roti and a drizzle of lemon juice on dal.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 5: FRIDAY -->
-
   <div class="day-section" id="day-4">
     <div class="day-header">
       <div class="day-number">05<span>FRI</span></div>
@@ -634,62 +614,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Upma with Lots of Vegetables</div>
-      <div class="meal-desc">Semolina cooked with mustard, curry leaves, onion, carrots, beans, peas and green chilli. Warm, comforting and wholesome. A fill-you-up morning classic.</div>
-      <div class="meal-meta"><span class="tag">Warm</span><span class="tag">Comforting</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Dry roast 1 cup rava/semolina in pan 3–4 min till fragrant. Keep aside.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Temper mustard, curry leaves, chilli in oil. Add onion, vegetables. Fry 3 min.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add 2.5 cups water, salt, bring to boil. Add roasted rava stirring continuously. Cook till thick. Garnish with coriander and lemon.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Upma with Lots of Vegetables</div>
+          <div class="meal-desc">Semolina cooked with mustard, curry leaves, onion, carrots, beans, peas and green chilli. Warm, comforting and wholesome. A fill-you-up morning classic.</div>
+          <div class="meal-meta"><span class="tag">Warm</span><span class="tag">Comforting</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Dry roast 1 cup rava/semolina in pan 3–4 min till fragrant. Keep aside.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Temper mustard, curry leaves, chilli in oil. Add onion, vegetables. Fry 3 min.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add 2.5 cups water, salt, bring to boil. Add roasted rava stirring continuously. Cook till thick. Garnish with coriander and lemon.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Vegetable Paneer Pulao + Raita</div>
-      <div class="meal-desc">Flavourful one-pot pulao with paneer and vegetables. Serve with a simple curd-based raita. Balanced, aromatic and satisfying — feels like a treat.</div>
-      <div class="meal-meta"><span class="tag">Flavorful</span><span class="tag">One-Pot</span><span class="tag">~40 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Fry whole spices in ghee. Add onion, ginger-garlic. Add diced vegetables, paneer, sauté 5 min.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Add soaked basmati rice, water (1:1.75), salt. Cover and cook on low till rice is done.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Make raita: whisk curd with salt, cumin powder, grated cucumber or boondi.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Vegetable Paneer Pulao + Raita</div>
+          <div class="meal-desc">Flavourful one-pot pulao with paneer and vegetables. Serve with a simple curd-based raita. Balanced, aromatic and satisfying — feels like a treat.</div>
+          <div class="meal-meta"><span class="tag">Flavorful</span><span class="tag">One-Pot</span><span class="tag">~40 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Fry whole spices in ghee. Add onion, ginger-garlic. Add diced vegetables, paneer, sauté 5 min.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Add soaked basmati rice, water (1:1.75), salt. Cover and cook on low till rice is done.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Make raita: whisk curd with salt, cumin powder, grated cucumber or boondi.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Soya Chunks Curry + Rice</div>
-      <div class="meal-desc">Protein-rich soya chunks in a hearty masala gravy with steamed rice. Satisfying, filling and budget-friendly. Tastes better when the gravy simmers long.</div>
-      <div class="meal-meta"><span class="tag">Protein Rich</span><span class="tag">Hearty</span><span class="tag">~35 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Boil soya chunks 5 min, squeeze and drain. Makes them absorb masala better.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Make thick onion-tomato-cashew gravy with standard masalas. Add soya chunks, simmer 15 min.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Steam ½ cup rice. Serve curry generously over rice with a wedge of lemon.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Soya Chunks Curry + Rice</div>
+          <div class="meal-desc">Protein-rich soya chunks in a hearty masala gravy with steamed rice. Satisfying, filling and budget-friendly. Tastes better when the gravy simmers long.</div>
+          <div class="meal-meta"><span class="tag">Protein Rich</span><span class="tag">Hearty</span><span class="tag">~35 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Boil soya chunks 5 min, squeeze and drain. Makes them absorb masala better.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Make thick onion-tomato-cashew gravy with standard masalas. Add soya chunks, simmer 15 min.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Steam ½ cup rice. Serve curry generously over rice with a wedge of lemon.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 6: SATURDAY -->
-
   <div class="day-section" id="day-5">
     <div class="day-header">
       <div class="day-number">06<span>SAT</span></div>
@@ -697,62 +673,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Ragi Dosa + Paneer Filling</div>
-      <div class="meal-desc">Crispy finger millet dosas filled with spiced paneer. High fiber, iron-rich and a great weekend breakfast. Nutritious and deliciously different.</div>
-      <div class="meal-meta"><span class="tag">High Fiber</span><span class="tag">Iron Rich</span><span class="tag">~30 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Mix ragi flour with rice flour, curd, salt, water to thin batter consistency. Rest 10 min.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Make paneer filling: crumbled paneer + chopped onion + green chilli + coriander + salt.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Pour batter thin on hot tawa. Place paneer filling on one side, fold dosa over. Serve with coconut chutney.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Ragi Dosa + Paneer Filling</div>
+          <div class="meal-desc">Crispy finger millet dosas filled with spiced paneer. High fiber, iron-rich and a great weekend breakfast. Nutritious and deliciously different.</div>
+          <div class="meal-meta"><span class="tag">High Fiber</span><span class="tag">Iron Rich</span><span class="tag">~30 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Mix ragi flour with rice flour, curd, salt, water to thin batter consistency. Rest 10 min.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Make paneer filling: crumbled paneer + chopped onion + green chilli + coriander + salt.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Pour batter thin on hot tawa. Place paneer filling on one side, fold dosa over. Serve with coconut chutney.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Chole Salad Bowl</div>
-      <div class="meal-desc">Protein-packed chickpeas tossed with onion, tomato, cucumber, lemon, chaat masala and fresh herbs. Light, refreshing and incredibly nutritious.</div>
-      <div class="meal-meta"><span class="tag">Light</span><span class="tag">No Cook</span><span class="tag">~15 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Use canned or pre-cooked/soaked chickpeas. Drain and rinse well.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Chop onion, tomato, cucumber, coriander. Mix with chickpeas.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add lemon juice, chaat masala, black salt, green chilli. Toss well and serve fresh.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Chole Salad Bowl</div>
+          <div class="meal-desc">Protein-packed chickpeas tossed with onion, tomato, cucumber, lemon, chaat masala and fresh herbs. Light, refreshing and incredibly nutritious.</div>
+          <div class="meal-meta"><span class="tag">Light</span><span class="tag">No Cook</span><span class="tag">~15 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Use canned or pre-cooked/soaked chickpeas. Drain and rinse well.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Chop onion, tomato, cucumber, coriander. Mix with chickpeas.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add lemon juice, chaat masala, black salt, green chilli. Toss well and serve fresh.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Stir-Fried Broccoli + Paneer</div>
-      <div class="meal-desc">High protein, detoxifying stir fry with tender broccoli florets and golden paneer. Tossed with garlic, soy sauce and mild spices. Quick weeknight favourite.</div>
-      <div class="meal-meta"><span class="tag">Detoxifying</span><span class="tag">High Protein</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Blanch broccoli florets 2 min. Cut paneer in 1-inch cubes. Chop garlic and spring onion.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Heat wok, add oil. Fry paneer till golden, set aside. Stir-fry garlic, add broccoli on high heat.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Add soy sauce, chilli flakes, salt, pepper. Return paneer to pan. Toss and serve immediately.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Stir-Fried Broccoli + Paneer</div>
+          <div class="meal-desc">High protein, detoxifying stir fry with tender broccoli florets and golden paneer. Tossed with garlic, soy sauce and mild spices. Quick weeknight favourite.</div>
+          <div class="meal-meta"><span class="tag">Detoxifying</span><span class="tag">High Protein</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Blanch broccoli florets 2 min. Cut paneer in 1-inch cubes. Chop garlic and spring onion.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Heat wok, add oil. Fry paneer till golden, set aside. Stir-fry garlic, add broccoli on high heat.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Add soy sauce, chilli flakes, salt, pepper. Return paneer to pan. Toss and serve immediately.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- DAY 7: SUNDAY -->
-
   <div class="day-section" id="day-6">
     <div class="day-header">
       <div class="day-number">07<span>SUN</span></div>
@@ -760,62 +732,58 @@ margin-bottom: 16px;
     </div>
     <div class="meals-grid">
 
-```
-  <div class="meal-card">
-    <div class="meal-type-bar breakfast"></div>
-    <div class="meal-body">
-      <div class="meal-label breakfast">☀️ Breakfast</div>
-      <div class="meal-name">Oats Cheela with Veggies</div>
-      <div class="meal-desc">High-fiber oats pancakes loaded with veggies — a nutritious, filling and healthy breakfast. High fiber, keeps you full through a lazy Sunday morning.</div>
-      <div class="meal-meta"><span class="tag">High Fiber</span><span class="tag">Filling</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Blend rolled oats to coarse flour. Mix with besan (½:½), curd, water, spices into batter.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Fold in grated carrot, chopped spinach, onion, green chilli.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Cook on non-stick tawa with minimal oil till both sides are golden and crisp. Serve with curd or chutney.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar breakfast"></div>
+        <div class="meal-body">
+          <div class="meal-label breakfast">☀️ Breakfast</div>
+          <div class="meal-name">Oats Cheela with Veggies</div>
+          <div class="meal-desc">High-fiber oats pancakes loaded with veggies — a nutritious, filling and healthy breakfast. High fiber, keeps you full through a lazy Sunday morning.</div>
+          <div class="meal-meta"><span class="tag">High Fiber</span><span class="tag">Filling</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Blend rolled oats to coarse flour. Mix with besan (½:½), curd, water, spices into batter.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Fold in grated carrot, chopped spinach, onion, green chilli.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Cook on non-stick tawa with minimal oil till both sides are golden and crisp. Serve with curd or chutney.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar lunch"></div>
-    <div class="meal-body">
-      <div class="meal-label lunch">🌤 Lunch</div>
-      <div class="meal-name">Dal Khichdi + Greek Yogurt</div>
-      <div class="meal-desc">One-pot rice and lentil comfort food with ghee tadka. Easy to digest, warm and wholesome. The ultimate Sunday reset meal. Greek yogurt cools it down perfectly.</div>
-      <div class="meal-meta"><span class="tag">Easy to Digest</span><span class="tag">Wholesome</span><span class="tag">~30 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Wash and combine rice + moong dal (1:1). Add turmeric, salt, 4 cups water. Pressure cook 3 whistles.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Make tadka: ghee, cumin, hing, dried red chilli, ginger julienne. Pour over khichdi.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve hot with 2 tbsp Greek yogurt and papad on side. Add pickle if desired.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar lunch"></div>
+        <div class="meal-body">
+          <div class="meal-label lunch">🌤 Lunch</div>
+          <div class="meal-name">Dal Khichdi + Greek Yogurt</div>
+          <div class="meal-desc">One-pot rice and lentil comfort food with ghee tadka. Easy to digest, warm and wholesome. The ultimate Sunday reset meal. Greek yogurt cools it down perfectly.</div>
+          <div class="meal-meta"><span class="tag">Easy to Digest</span><span class="tag">Wholesome</span><span class="tag">~30 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Wash and combine rice + moong dal (1:1). Add turmeric, salt, 4 cups water. Pressure cook 3 whistles.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Make tadka: ghee, cumin, hing, dried red chilli, ginger julienne. Pour over khichdi.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve hot with 2 tbsp Greek yogurt and papad on side. Add pickle if desired.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="meal-card">
-    <div class="meal-type-bar dinner"></div>
-    <div class="meal-body">
-      <div class="meal-label dinner">🌙 Dinner</div>
-      <div class="meal-name">Light Khichdi + Curd</div>
-      <div class="meal-desc">A lighter, plain khichdi for Sunday dinner — easy on the stomach, minimal effort and deeply nourishing. Curd on the side aids digestion overnight.</div>
-      <div class="meal-meta"><span class="tag">Light</span><span class="tag">Minimal Effort</span><span class="tag">~20 min</span></div>
-      <div class="prep-steps">
-        <h4>Cook's Instructions</h4>
-        <div class="step"><div class="step-num">1</div><p>Cook plain khichdi: rice + moong dal + salt + turmeric + water in cooker. Keep it soft/mushy.</p></div>
-        <div class="step"><div class="step-num">2</div><p>Top with a spoon of ghee and simple cumin-pepper tadka.</p></div>
-        <div class="step"><div class="step-num">3</div><p>Serve in bowl with chilled curd and a pinch of jeera powder on curd. Simple, comforting and done.</p></div>
+      <div class="meal-card">
+        <div class="meal-type-bar dinner"></div>
+        <div class="meal-body">
+          <div class="meal-label dinner">🌙 Dinner</div>
+          <div class="meal-name">Light Khichdi + Curd</div>
+          <div class="meal-desc">A lighter, plain khichdi for Sunday dinner — easy on the stomach, minimal effort and deeply nourishing. Curd on the side aids digestion overnight.</div>
+          <div class="meal-meta"><span class="tag">Light</span><span class="tag">Minimal Effort</span><span class="tag">~20 min</span></div>
+          <div class="prep-steps">
+            <h4>Cook's Instructions</h4>
+            <div class="step"><div class="step-num">1</div><p>Cook plain khichdi: rice + moong dal + salt + turmeric + water in cooker. Keep it soft/mushy.</p></div>
+            <div class="step"><div class="step-num">2</div><p>Top with a spoon of ghee and simple cumin-pepper tadka.</p></div>
+            <div class="step"><div class="step-num">3</div><p>Serve in bowl with chilled curd and a pinch of jeera powder on curd. Simple, comforting and done.</p></div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- TIPS -->
-
   <div class="tips-section">
     <h3>🧑‍🍳 Cook's Cheat Sheet — Instructions for Your Maid/Cook</h3>
     <div class="tip"><div class="tip-icon">📦</div><p><strong>Weekly groceries to keep stocked:</strong> Paneer (500g), Tofu (1 block), Moong dal, Toor dal, Soya chunks, Brown rice, Basmati rice, Besan, Oats, Ragi flour, Curd/Greek Yogurt, seasonal vegetables (broccoli, spinach, capsicum, carrots, peas, onion, tomato), lemons.</p></div>
@@ -837,6 +805,5 @@ function showDay(index, btn) {
   window.scrollTo({ top: document.querySelector('.day-nav').offsetTop - 10, behavior: 'smooth' });
 }
 </script>
-
 </body>
 </html>
